@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `WebAppBaby`
 --
 
-CREATE TABLE `WebAppBaby` (
+CREATE TABLE `db624165429`.`WebAppBaby` (
   `Id` int(11) NOT NULL,
   `FirstName` varchar(40) NOT NULL,
   `LastName` varchar(40) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `WebAppBaby` (
 -- Structure de la table `WebAppInOutLog`
 --
 
-CREATE TABLE `WebAppInOutLog` (
+CREATE TABLE `db624165429`.`WebAppInOutLog` (
   `Id` bigint(20) NOT NULL,
   `BabyId` int(11) NOT NULL,
   `Entree` time NOT NULL,
@@ -56,13 +56,13 @@ CREATE TABLE `WebAppInOutLog` (
 --
 -- Index pour la table `WebAppBaby`
 --
-ALTER TABLE `WebAppBaby`
+ALTER TABLE `db624165429`.`WebAppBaby`
   ADD PRIMARY KEY (`Id`);
 
 --
 -- Index pour la table `WebAppInOutLog`
 --
-ALTER TABLE `WebAppInOutLog`
+ALTER TABLE `db624165429`.`WebAppInOutLog`
   ADD PRIMARY KEY (`Id`);
 
 --
@@ -72,12 +72,12 @@ ALTER TABLE `WebAppInOutLog`
 --
 -- AUTO_INCREMENT pour la table `WebAppBaby`
 --
-ALTER TABLE `WebAppBaby`
+ALTER TABLE `db624165429`.`WebAppBaby`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT pour la table `WebAppInOutLog`
 --
-ALTER TABLE `WebAppInOutLog`
+ALTER TABLE `db624165429`.`WebAppInOutLog`
   MODIFY `Id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
