@@ -3,7 +3,7 @@ $providedKey = htmlspecialchars($_POST["key"]);
 require ("Authenticate.php");
 require("dbconnect.php");
 	//build query
-	$babies = 'SELECT * FROM baby';
+	$babies = 'SELECT * FROM WebAppBaby';
 	//echo $query; 
 	$results = $mysqli->query($babies);
 	$returnString = '';
