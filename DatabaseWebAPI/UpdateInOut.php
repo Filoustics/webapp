@@ -10,7 +10,7 @@ if (isset($_POST["babyid"]) && isset($_POST["entree"]) && isset($_POST["sortie"]
 	$sortie = htmlspecialchars($_POST["sortie"]);
 	$day = htmlspecialchars($_POST["day"]);
 	//build query
-	$query = 'SELECT Id FROM InOutLog WHERE BabyId = '. $babyid.' AND Jour = "'. $day.'"';
+	$query = 'SELECT Id FROM WebAppInOutLog WHERE BabyId = '. $babyid.' AND Jour = "'. $day.'"';
 
 	$results = $mysqli->query($query);
 
@@ -22,11 +22,11 @@ if (isset($_POST["babyid"]) && isset($_POST["entree"]) && isset($_POST["sortie"]
 	{
 		if ($row = $results->fetch_array(MYSQLI_NUM))
 		{
-			$query2 = 'UPDATE InOutLog SET Entree ="'. $entree .'", Sortie = "'. $sortie .'" WHERE Id = '.$row[0].';';
+			$query2 = 'UPDATE WebAppInOutLog SET Entree ="'. $entree .'", Sortie = "'. $sortie .'" WHERE Id = '.$row[0].';';
 		}
 		else
 		{
-			$query2 = 'INSERT INTO InOutLog(BabyId,Entree,Sortie,Jour) VALUES ('. $babyid .',"' . $entree . '","'. $sortie .'","'.$day.'")';			
+			$query2 = 'INSERT INTO WebAppInOutLog(BabyId,Entree,Sortie,Jour) VALUES ('. $babyid .',"' . $entree . '","'. $sortie .'","'.$day.'")';			
 		}
 
 		//echo $query; 
