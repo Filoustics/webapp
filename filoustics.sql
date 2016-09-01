@@ -17,16 +17,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `filoustics`
+-- Base de données :  `db624165429`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `baby`
+-- Structure de la table `WebAppBaby`
 --
 
-CREATE TABLE `baby` (
+CREATE TABLE `WebAppBaby` (
   `Id` int(11) NOT NULL,
   `FirstName` varchar(40) NOT NULL,
   `LastName` varchar(40) NOT NULL,
@@ -38,10 +38,10 @@ CREATE TABLE `baby` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `InOutLog`
+-- Structure de la table `WebAppInOutLog`
 --
 
-CREATE TABLE `InOutLog` (
+CREATE TABLE `WebAppInOutLog` (
   `Id` bigint(20) NOT NULL,
   `BabyId` int(11) NOT NULL,
   `Entree` time NOT NULL,
@@ -54,15 +54,15 @@ CREATE TABLE `InOutLog` (
 --
 
 --
--- Index pour la table `baby`
+-- Index pour la table `WebAppBaby`
 --
-ALTER TABLE `baby`
+ALTER TABLE `WebAppBaby`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Index pour la table `InOutLog`
+-- Index pour la table `WebAppInOutLog`
 --
-ALTER TABLE `InOutLog`
+ALTER TABLE `WebAppInOutLog`
   ADD PRIMARY KEY (`Id`);
 
 --
@@ -70,14 +70,14 @@ ALTER TABLE `InOutLog`
 --
 
 --
--- AUTO_INCREMENT pour la table `baby`
+-- AUTO_INCREMENT pour la table `WebAppBaby`
 --
-ALTER TABLE `baby`
+ALTER TABLE `WebAppBaby`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
--- AUTO_INCREMENT pour la table `InOutLog`
+-- AUTO_INCREMENT pour la table `WebAppInOutLog`
 --
-ALTER TABLE `InOutLog`
+ALTER TABLE `WebAppInOutLog`
   MODIFY `Id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
