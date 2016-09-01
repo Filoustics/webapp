@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- Contenu de la table `WebAppBaby`
 --
 
-INSERT INTO `WebAppBaby` (`Id`, `FirstName`, `LastName`, `IsGirl`, `BirthDay`, `Actif`) VALUES
+INSERT INTO `db624165429`.`WebAppBaby` (`Id`, `FirstName`, `LastName`, `IsGirl`, `BirthDay`, `Actif`) VALUES
 (1, 'Hadrien', '.', 0, '2013-01-01 00:00:00', 0),
 (2, 'Alexis', '.', 0, '2013-01-01 00:00:00', 0),
 (3, 'Valentin', '.', 0, '2013-01-01 00:00:00', 0),
