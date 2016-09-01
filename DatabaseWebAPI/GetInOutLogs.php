@@ -6,7 +6,7 @@ if (isset($_POST["day"]))
 	//read vars
 	$day = htmlspecialchars($_POST["day"]);
 	//build query
-	$babies = 'SELECT b.FirstName, b.Id FROM baby b  WHERE b.Actif = 1 ORDER BY b.FirstName';
+	$babies = 'SELECT b.FirstName, b.Id FROM WebAppBaby b  WHERE b.Actif = 1 ORDER BY b.FirstName';
 	//echo $query; 
 	$results = $mysqli->query($babies);
 	$returnString = '';
@@ -19,7 +19,7 @@ if (isset($_POST["day"]))
 	 	$returnString = "[";
 		 while ($row = $results->fetch_array(MYSQLI_NUM))
 		 {
-			$log = 'SELECT l.Entree, l.Sortie FROM InOutLog l WHERE l.BabyId = '. $row[1] .' AND Jour="'.$day.'"';
+			$log = 'SELECT l.Entree, l.Sortie FROM WebAppInOutLog l WHERE l.BabyId = '. $row[1] .' AND Jour="'.$day.'"';
 			$results2 = $mysqli->query($log);
 			$entree = "00:00";
 			$sortie = "00:00";
