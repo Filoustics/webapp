@@ -19,11 +19,11 @@ if (isset($_POST["day"]))
 	//build babies query
 	if ($babyId == 0)
 	{
-		$babiesReq = 'SELECT b.FirstName, b.Id FROM baby b WHERE b.Actif = 1 ORDER BY b.FirstName';
+		$babiesReq = 'SELECT b.FirstName, b.Id FROM WebAppBaby b WHERE b.Actif = 1 ORDER BY b.FirstName';
 	}
 	else
 	{
-		$babiesReq = 'SELECT b.FirstName, b.Id FROM baby b WHERE b.Id = ' . $babyId;
+		$babiesReq = 'SELECT b.FirstName, b.Id FROM WebAppBaby b WHERE b.Id = ' . $babyId;
 	}
 
 	//echo $query; 
@@ -42,7 +42,7 @@ if (isset($_POST["day"]))
 			$curDay = new DateTime($day);
 			for ($i = 0; $i < $duration; $i++)
 			{
-				$log = 'SELECT l.Entree, l.Sortie FROM InOutLog l WHERE l.BabyId = '. $row[1] .' AND Jour="'.$curDay->format('Y-m-d').'"';
+				$log = 'SELECT l.Entree, l.Sortie FROM WebAppInOutLog l WHERE l.BabyId = '. $row[1] .' AND Jour="'.$curDay->format('Y-m-d').'"';
 				$results2 = $mysqli->query($log);
 				$entree = "00:00";
 				$sortie = "00:00";
